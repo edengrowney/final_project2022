@@ -1,0 +1,306 @@
+@keyframes logoAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#eden {
+    align-self: center;
+    animation-name: logoAnimation;
+    animation-duration: 5s;
+}
+
+.skip {
+    position: absolute;
+    top: -40px;
+}
+
+.skip a:focus {
+    position: fixed;
+    top: 20px;
+}
+
+
+body {
+    background-color: lightgray;
+
+}
+
+header {
+    align-self: center;
+}
+
+h1 {
+    text-align: center;
+    font-style: italic;
+}
+
+.top h1::after {
+    content: "☎️"
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    background-color: seashell;
+    border-radius: 10px;
+    /* padding: 30px; */
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.nav_item {
+    margin: 5px;
+    background-color: seashell;
+    border-radius: 10px;
+    font-size: larger;
+    text-decoration-color: black;
+    color: black;
+}
+
+#active {
+    border-color: black;
+    border-width: 3px;
+    border-style: dashed;
+    font-weight: bold;
+}
+
+li {
+    padding: 10px;
+    text-decoration: underline;
+    list-style: none;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+#eden,
+#github {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-color: black;
+    margin: 20px;
+    background-color: #003b49;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 20px;
+    border-color: aquamarine;
+    align-items: center;
+}
+
+.card p,
+h3 {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px;
+    background-color: #FFFFFF;
+    font-family: 'Tahoma', 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+
+.homework {
+    display: none;
+}
+
+.homework ul {
+    background-color: white;
+    font-family: 'Tahoma', 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    color: black;
+}
+
+li {
+    margin: 10px;
+    text-align: center;
+}
+
+.expirience {
+    display: grid;
+    width: 90%;
+    grid-template-columns: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.gallery .card {
+    width: 50%;
+}
+
+
+footer {
+    background-color: seashell;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.contact {
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+}
+
+.contact {
+    width: 40%;
+}
+
+@media (prefers-reduced-motion) {
+    .animation {
+        animation: none
+    }
+}
+
+
+@media (min-width: 700px) {
+    .contact {
+        display: none;
+    }
+
+    #eden {
+        width: 80%;
+    }
+
+    .top h1 {
+        font-style: normal;
+        text-decoration: underline;
+    }
+
+    .top h1::after {
+        content: "📱"
+    }
+
+    .card {
+        padding: 5%;
+    }
+
+    .gallery {
+        display: flex;
+        height: 2000px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .gallery .card {
+        width: 30%;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .expirience {
+        grid-template-columns: 33% 33% 33%;
+        /* margin-right: 10%;
+        margin-left: 10%; */
+    }
+}
+
+
+@media (min-width: 900px) {
+
+    .top {
+        flex-direction: row;
+        margin-left: 10%;
+        justify-content: space-between;
+        width: 90%;
+        margin: 5%;
+    }
+
+
+    .top h1::after {
+        content: "💻"
+    }
+
+    .top h1 {
+        margin-left: 0px;
+        padding-left: 0px;
+        font-style: normal;
+        border-width: 3px;
+        border-style: groove;
+        border-color: black;
+        border-radius: 10px;
+        padding: 10px;
+        align-self: center;
+    }
+
+    #eden {
+        margin-left: 5%;
+    }
+
+    .gallery {
+        width: 90%;
+        margin: 5%;
+        flex-direction: row;
+        align-content: flex-start;
+        margin-bottom: 0%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .gallery .card {
+        min-width: 150px;
+        max-width: 300px;
+        min-height: 300px;
+        max-height: 360px;
+        align-content: center;
+        margin: 1%;
+        padding-top: 1%;
+    }
+
+    .expirience {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .homework {
+        display: inline;
+        ;
+    }
+
+}
+
+@media print {
+    .top {
+        display: none;
+    }
+    .card{
+        padding: 2%;
+        text-align: left;
+        margin: 3%;
+    }
+    .card img{
+        display: none;
+    }
+}
